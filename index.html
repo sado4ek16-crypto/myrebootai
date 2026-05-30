@@ -31,32 +31,18 @@
       );
     }
 
-    /* 🌫️ BREATHING SILHOUETTE */
     @keyframes breathe {
-      0%, 100% {
-        transform: scale(1);
-        filter: blur(0px);
-      }
-      50% {
-        transform: scale(1.03);
-        filter: blur(0.3px);
-      }
+      0%, 100% { transform: scale(1); filter: blur(0px); }
+      50% { transform: scale(1.03); filter: blur(0.3px); }
     }
 
     .breathe {
       animation: breathe 8s ease-in-out infinite;
     }
 
-    /* ✨ TEXT ANIMATION */
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .fade-up {
@@ -68,16 +54,9 @@
     .fade-delay-2 { animation-delay: 0.5s; }
     .fade-delay-3 { animation-delay: 0.8s; }
 
-    /* 🌟 FLOATING GLOW */
     @keyframes floatGlow {
-      0%, 100% {
-        transform: translateY(0px);
-        opacity: 0.4;
-      }
-      50% {
-        transform: translateY(-10px);
-        opacity: 0.6;
-      }
+      0%, 100% { transform: translateY(0px); opacity: 0.4; }
+      50% { transform: translateY(-10px); opacity: 0.6; }
     }
 
     .float-glow {
@@ -97,22 +76,16 @@
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden hero-gradient">
 
-    <!-- IMAGE -->
     <div class="absolute inset-0 flex justify-end items-center">
-      <img
-        src="silhouette.jpg"
+      <img src="silhouette.jpg"
         class="h-full w-auto object-cover object-right opacity-90 breathe"
-        alt="AI Visual"
-      />
+        alt="AI Visual" />
     </div>
 
-    <!-- GLOW -->
     <div class="absolute -inset-20 bg-purple-500/10 blur-3xl rounded-full float-glow"></div>
 
-    <!-- OVERLAY -->
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
 
-    <!-- TEXT -->
     <div class="relative max-w-7xl mx-auto w-full">
 
       <div class="max-w-2xl">
@@ -134,20 +107,20 @@
 
         <div class="flex flex-wrap gap-4 fade-up fade-delay-3">
 
-          <button class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl transition">
+          <a href="#signup"
+             class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl transition inline-block">
             Join Early Access
-          </button>
+          </a>
 
-          <button class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl transition">
+          <a href="#signup"
+             class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl transition inline-block">
             Share Your Experience
-          </button>
+          </a>
 
         </div>
 
       </div>
-
     </div>
-
   </section>
 
   <!-- EMOTIONAL PROBLEM -->
@@ -164,7 +137,6 @@
 
   <!-- FEATURES -->
   <section class="py-24 px-6 bg-slate-900">
-
     <div class="max-w-7xl mx-auto text-center mb-20">
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Four Emotional AI Modes
@@ -197,12 +169,10 @@
       </div>
 
     </div>
-
   </section>
 
   <!-- PERSONAS -->
   <section class="py-24 px-6 bg-slate-950">
-
     <div class="max-w-7xl mx-auto text-center mb-20">
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Inspired by Real Emotional Journeys
@@ -247,11 +217,10 @@
       </div>
 
     </div>
-
   </section>
 
   <!-- FORM -->
-  <section class="py-24 px-6 bg-slate-950">
+  <section id="signup" class="py-24 px-6 bg-slate-950">
 
     <div class="max-w-3xl mx-auto glass-card rounded-3xl p-10">
 
@@ -288,7 +257,6 @@
       </p>
 
     </div>
-
   </section>
 
   <!-- CTA -->
