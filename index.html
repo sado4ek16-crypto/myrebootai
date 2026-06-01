@@ -70,12 +70,27 @@
     }
   </style>
 </head>
-
 <body class="overflow-x-hidden">
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <div class="font-bold text-xl text-purple-300">
+      MyRebootAI
+    </div>
+
+    <div class="flex gap-6 text-sm text-slate-300">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#how-it-works" class="hover:text-white">How It Works</a>
+      <a href="#personas" class="hover:text-white">Personas</a>
+      <a href="#signup" class="hover:text-white">Contact</a>
+    </div>
+
+  </div>
+</nav>
 
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden hero-gradient">
-
+   <section class="relative min-h-screen flex items-center px-6 py-20 pt-32 overflow-hidden hero-gradient">
     <div class="absolute inset-0 flex justify-end items-center">
       <img src="silhouette.jpg"
         class="h-full w-auto object-cover object-right opacity-90 breathe"
@@ -124,7 +139,7 @@
   </section>
 
   <!-- EMOTIONAL PROBLEM -->
-  <section class="py-24 px-6 bg-slate-950">
+  <section id="about" class="py-24 px-6 bg-slate-950">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-4xl lg:text-5xl font-bold mb-8">
         Emotional overload is often invisible.
@@ -136,7 +151,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="py-24 px-6 bg-slate-900">
+  <section id="how-it-works" class="py-24 px-6 bg-slate-900">
     <div class="max-w-7xl mx-auto text-center mb-20">
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Four Emotional AI Modes
@@ -172,7 +187,7 @@
   </section>
 
   <!-- PERSONAS -->
-  <section class="py-24 px-6 bg-slate-950">
+  <section id="personas" class="py-24 px-6 bg-slate-950">
     <div class="max-w-7xl mx-auto text-center mb-20">
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Inspired by Real Emotional Journeys
@@ -218,7 +233,58 @@
 
     </div>
   </section>
+<!-- EARLY VALIDATION -->
+<section class="py-24 px-6 bg-slate-900">
 
+  <div class="max-w-5xl mx-auto text-center">
+
+    <p class="uppercase tracking-[0.35em] text-purple-300 text-sm mb-6">
+      EARLY VALIDATION
+    </p>
+
+    <h2 class="text-4xl lg:text-5xl font-bold mb-12">
+      Research-Driven Product Development
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="glass-card rounded-3xl p-8">
+        <h3 class="text-4xl font-bold text-purple-300 mb-4">100+</h3>
+        <p class="text-slate-300">
+          Emotional discussions and community conversations analyzed
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8">
+        <h3 class="text-4xl font-bold text-purple-300 mb-4">4</h3>
+        <p class="text-slate-300">
+          Emotional personas identified through AI-assisted research
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8">
+        <h3 class="text-4xl font-bold text-purple-300 mb-4">5</h3>
+        <p class="text-slate-300">
+          Strategic hypotheses generated from recurring emotional patterns
+        </p>
+      </div>
+
+      <div class="glass-card rounded-3xl p-8">
+        <h3 class="text-4xl font-bold text-purple-300 mb-4">MVP</h3>
+        <p class="text-slate-300">
+          Concept refined through community feedback and validation
+        </p>
+      </div>
+
+    </div>
+
+    <p class="text-slate-400 text-lg mt-12 max-w-3xl mx-auto">
+      Building MyRebootAI is grounded in research, emotional insight, and real user experiences.
+    </p>
+
+  </div>
+
+</section>
   <!-- FORM -->
   <section id="signup" class="py-24 px-6 bg-slate-950">
 
@@ -270,10 +336,10 @@
           It should help them feel emotionally understood.
         </span>
       </h2>
-
-      <button class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-10 py-5 rounded-2xl transition">
-        Join the Waitlist
-      </button>
+      <a href="#signup"
+   class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-10 py-5 rounded-2xl transition inline-block">
+  Join the Waitlist
+</a>
 
     </div>
 
