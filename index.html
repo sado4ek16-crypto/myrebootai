@@ -18,49 +18,14 @@
       color: white;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     .hero-gradient {
-      background: linear-gradient(
-        135deg,
-        rgba(2,6,23,0.92),
-        rgba(88,28,135,0.72),
-        rgba(15,23,42,0.92)
-      );
-    }
-
-    @keyframes breathe {
-      0%, 100% { transform: scale(1); filter: blur(0px); }
-      50% { transform: scale(1.03); filter: blur(0.3px); }
-    }
-
-    .breathe {
-      animation: breathe 8s ease-in-out infinite;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-up {
-      animation: fadeUp 1.2s ease-out forwards;
-      opacity: 0;
-    }
-
-    .fade-delay-1 { animation-delay: 0.2s; }
-    .fade-delay-2 { animation-delay: 0.5s; }
-    .fade-delay-3 { animation-delay: 0.8s; }
-
-    @keyframes floatGlow {
-      0%, 100% { transform: translateY(0px); opacity: 0.4; }
-      50% { transform: translateY(-10px); opacity: 0.6; }
-    }
-
-    .float-glow {
-      animation: floatGlow 6s ease-in-out infinite;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(2,6,23,0.92),
+          rgba(88,28,135,0.72),
+          rgba(15,23,42,0.92)
+        );
     }
 
     .glass-card {
@@ -68,97 +33,103 @@
       backdrop-filter: blur(14px);
       border: 1px solid rgba(255,255,255,0.08);
     }
+
+    .soft-glow {
+      box-shadow: 0 0 40px rgba(168,85,247,0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
+
 <body class="overflow-x-hidden">
-<!-- NAVIGATION -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <div class="font-bold text-xl text-purple-300">
-      MyRebootAI
-    </div>
+  <!-- HERO SECTION -->
+  <section class="hero-gradient min-h-screen flex items-center px-6 py-20">
 
-    <div class="flex gap-6 text-sm text-slate-300">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#how-it-works" class="hover:text-white">How It Works</a>
-      <a href="#personas" class="hover:text-white">Personas</a>
-      <a href="#signup" class="hover:text-white">Contact</a>
-    </div>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-  </div>
-</nav>
+      <!-- LEFT SIDE (UNCHANGED) -->
+      <div>
 
-  <!-- HERO -->
-   <section class="relative min-h-screen flex items-center px-6 py-20 pt-32 overflow-hidden hero-gradient">
-    <div class="absolute inset-0 flex justify-end items-center">
-      <img src="silhouette.jpg"
-        class="h-full w-auto object-cover object-right opacity-90 breathe"
-        alt="AI Visual" />
-    </div>
-
-    <div class="absolute -inset-20 bg-purple-500/10 blur-3xl rounded-full float-glow"></div>
-
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
-
-    <div class="relative max-w-7xl mx-auto w-full">
-
-      <div class="max-w-2xl">
-
-        <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-6 fade-up fade-delay-1">
+        <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-6">
           Emotional AI for Women in Transition
         </p>
 
-        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8 fade-up fade-delay-2">
+        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8">
           You don’t need to be fixed.
-          <span class="text-purple-300 block mt-2">
+          <span class="text-purple-300">
             You need space to reconnect.
           </span>
         </h1>
 
-        <p class="text-xl text-slate-300 leading-relaxed mb-10 fade-up fade-delay-3">
+        <p class="text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
           MyRebootAI is an emotionally adaptive AI companion designed to support women through burnout, identity shifts, emotional overwhelm, and quiet life transitions.
         </p>
 
-        <div class="flex flex-wrap gap-4 fade-up fade-delay-3">
+        <div class="flex flex-wrap gap-4">
 
-          <a href="#signup"
-             class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl transition inline-block">
+          <button class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl transition duration-300">
             Join Early Access
-          </a>
+          </button>
 
-          <a href="#signup"
-             class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl transition inline-block">
+          <button class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl transition duration-300">
             Share Your Experience
-          </a>
+          </button>
 
         </div>
 
       </div>
+
+      <!-- RIGHT SIDE (UPDATED IMAGE ONLY) -->
+      <div class="relative">
+
+        <img
+          src="silhouette.jpg"
+          alt="Emotional AI Visual"
+          class="rounded-3xl object-cover w-full h-[720px] shadow-2xl soft-glow"
+        />
+
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/40 to-transparent"></div>
+
+      </div>
+
     </div>
+
   </section>
 
   <!-- EMOTIONAL PROBLEM -->
-  <section id="about" class="py-24 px-6 bg-slate-950">
+  <section class="py-24 px-6 bg-slate-950">
+
     <div class="max-w-5xl mx-auto text-center">
+
       <h2 class="text-4xl lg:text-5xl font-bold mb-8">
         Emotional overload is often invisible.
       </h2>
+
       <p class="text-slate-300 text-xl leading-relaxed">
         Many women over 40 continue functioning professionally and socially while silently navigating burnout, loneliness, emotional exhaustion, and identity shifts.
       </p>
+
     </div>
+
   </section>
 
-  <!-- FEATURES -->
-  <section id="how-it-works" class="py-24 px-6 bg-slate-900">
+  <!-- HOW IT WORKS -->
+  <section class="py-24 px-6 bg-slate-900">
+
     <div class="max-w-7xl mx-auto text-center mb-20">
+
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Four Emotional AI Modes
       </h2>
+
       <p class="text-slate-400 text-lg max-w-3xl mx-auto">
         MyRebootAI adapts to emotional states instead of forcing one interaction style.
       </p>
+
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -184,17 +155,22 @@
       </div>
 
     </div>
+
   </section>
 
   <!-- PERSONAS -->
-  <section id="personas" class="py-24 px-6 bg-slate-950">
+  <section class="py-24 px-6 bg-slate-950">
+
     <div class="max-w-7xl mx-auto text-center mb-20">
+
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
         Inspired by Real Emotional Journeys
       </h2>
+
       <p class="text-slate-400 text-lg max-w-3xl mx-auto">
         Emotional experiences collected and transformed into human-centered AI support design.
       </p>
+
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -232,59 +208,9 @@
       </div>
 
     </div>
+
   </section>
-<!-- EARLY VALIDATION -->
-<section class="py-24 px-6 bg-slate-900">
 
-  <div class="max-w-5xl mx-auto text-center">
-
-    <p class="uppercase tracking-[0.35em] text-purple-300 text-sm mb-6">
-      EARLY VALIDATION
-    </p>
-
-    <h2 class="text-4xl lg:text-5xl font-bold mb-12">
-      Research-Driven Product Development
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <div class="glass-card rounded-3xl p-8">
-        <h3 class="text-4xl font-bold text-purple-300 mb-4">100+</h3>
-        <p class="text-slate-300">
-          Emotional discussions and community conversations analyzed
-        </p>
-      </div>
-
-      <div class="glass-card rounded-3xl p-8">
-        <h3 class="text-4xl font-bold text-purple-300 mb-4">4</h3>
-        <p class="text-slate-300">
-          Emotional personas identified through AI-assisted research
-        </p>
-      </div>
-
-      <div class="glass-card rounded-3xl p-8">
-        <h3 class="text-4xl font-bold text-purple-300 mb-4">5</h3>
-        <p class="text-slate-300">
-          Strategic hypotheses generated from recurring emotional patterns
-        </p>
-      </div>
-
-      <div class="glass-card rounded-3xl p-8">
-        <h3 class="text-4xl font-bold text-purple-300 mb-4">MVP</h3>
-        <p class="text-slate-300">
-          Concept refined through community feedback and validation
-        </p>
-      </div>
-
-    </div>
-
-    <p class="text-slate-400 text-lg mt-12 max-w-3xl mx-auto">
-      Building MyRebootAI is grounded in research, emotional insight, and real user experiences.
-    </p>
-
-  </div>
-
-</section>
   <!-- FORM -->
   <section id="signup" class="py-24 px-6 bg-slate-950">
 
@@ -323,27 +249,37 @@
       </p>
 
     </div>
+
   </section>
 
-  <!-- CTA -->
-  <section class="py-32 px-6 bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 text-center">
+<!-- FINAL CTA -->
+<section class="py-32 px-6 hero-gradient text-center">
 
-    <div class="max-w-4xl mx-auto">
+  <div class="max-w-3xl mx-auto">
 
-      <h2 class="text-5xl lg:text-6xl font-bold leading-tight mb-10">
+    <h2 class="text-4xl lg:text-6xl font-bold leading-tight mb-10 space-y-6">
+
+      <span class="block text-white">
         Technology should not only optimize people.
-        <span class="text-purple-300">
-          It should help them feel emotionally understood.
-        </span>
-      </h2>
-      <a href="#signup"
-   class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-10 py-5 rounded-2xl transition inline-block">
+      </span>
+
+      <span class="block text-purple-300">
+        It should help them feel emotionally understood.
+      </span>
+
+    </h2>
+
+    <a href="#signup" class="inline-block bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-10 py-5 rounded-2xl transition duration-300">
   Join the Waitlist
 </a>
 
-    </div>
+    <p class="text-slate-400 mt-6 text-sm">
+      Join early users shaping the first version of MyRebootAI
+    </p>
 
-  </section>
+  </div>
+
+</section>
 
 </body>
 </html>
