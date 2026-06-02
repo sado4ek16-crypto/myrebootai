@@ -22,9 +22,9 @@
     }
 
     @keyframes breathe {
-      0% { transform: scale(1.01); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1.01); }
+      0% { transform: scale(1.02); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1.02); }
     }
 
     .breathe {
@@ -45,15 +45,22 @@
 <!-- HERO -->
 <section class="relative h-screen overflow-hidden">
 
-  <!-- BACKGROUND IMAGE (FIXED COMPOSITION) -->
+  <!-- BACKGROUND (soft atmospheric layer) -->
   <img
     src="silhouette.jpg"
-    class="absolute inset-0 w-full h-full object-cover object-[center_45%] scale-95 opacity-70 breathe"
-    alt="AI Visual"
+    class="absolute inset-0 w-full h-full object-cover object-center opacity-30 blur-md scale-110"
+    alt="background"
   />
 
-  <!-- OVERLAY + PURPLE GLOW -->
-  <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-900/50"></div>
+  <!-- FOREGROUND IMAGE (FULL BODY FIX) -->
+  <img
+    src="silhouette.jpg"
+    class="absolute right-0 bottom-0 h-full max-h-[95vh] w-auto object-contain object-bottom breathe"
+    alt="hero woman"
+  />
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-900/40"></div>
 
   <!-- TEXT -->
   <div class="relative z-10 h-full">
