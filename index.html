@@ -22,13 +22,13 @@
     }
 
     @keyframes breathe {
-      0% { transform: scale(1.01); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1.01); }
+      0% { transform: scale(1.02); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1.02); }
     }
 
     .breathe {
-      animation: breathe 16s ease-in-out infinite;
+      animation: breathe 14s ease-in-out infinite;
     }
 
     .glass-card {
@@ -44,10 +44,10 @@
 <!-- HERO -->
 <section class="relative h-screen overflow-hidden">
 
-  <!-- BACKGROUND IMAGE (FIXED, NO CROPPING HEAD) -->
+  <!-- BACKGROUND IMAGE (FIXED SCALE + FULL VISIBILITY) -->
   <img
     src="silhouette.jpg"
-    class="absolute inset-0 w-full h-full object-cover object-[center_15%] opacity-70 breathe"
+    class="absolute inset-0 w-full h-full object-contain object-center opacity-60 breathe scale-110"
     alt="AI Visual"
   />
 
@@ -137,6 +137,7 @@
     </div>
 
   </div>
+
 </section>
 
 <!-- PERSONAS -->
@@ -182,6 +183,7 @@
     </div>
 
   </div>
+
 </section>
 
 <!-- FORM -->
@@ -211,6 +213,7 @@
     <p class="text-center text-slate-400 mt-8">Contact: MyrebootAI@gmail.com</p>
 
   </div>
+
 </section>
 
 <!-- CTA -->
