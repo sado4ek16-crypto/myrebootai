@@ -22,13 +22,14 @@
     }
 
     @keyframes breathe {
-      0% { transform: scale(1.02); }
-      50% { transform: scale(1.06); }
-      100% { transform: scale(1.02); }
+      0% { transform: scale(1.01); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1.01); }
     }
 
     .breathe {
       animation: breathe 14s ease-in-out infinite;
+      transform-origin: center;
     }
 
     .glass-card {
@@ -44,10 +45,10 @@
 <!-- HERO -->
 <section class="relative h-screen overflow-hidden">
 
-  <!-- BACKGROUND IMAGE (FIXED SCALE + FULL VISIBILITY) -->
+  <!-- BACKGROUND FIXED -->
   <img
     src="silhouette.jpg"
-    class="absolute inset-0 w-full h-full object-contain object-center opacity-60 breathe scale-110"
+    class="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-65 breathe"
     alt="AI Visual"
   />
 
