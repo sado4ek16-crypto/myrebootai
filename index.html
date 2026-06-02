@@ -23,12 +23,12 @@
 
     @keyframes breathe {
       0% { transform: scale(1.02); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.06); }
       100% { transform: scale(1.02); }
     }
 
     .breathe {
-      animation: breathe 12s ease-in-out infinite;
+      animation: breathe 14s ease-in-out infinite;
     }
 
     .glass-card {
@@ -39,29 +39,29 @@
   </style>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
 <!-- HERO -->
-<section class="relative min-h-screen overflow-hidden">
+<section class="relative min-h-screen overflow-hidden flex items-center">
 
-  <!-- RIGHT IMAGE BACKGROUND -->
-  <div class="absolute inset-0 flex justify-end">
-    <img
-      src="silhouette.jpg"
-      class="h-full w-1/2 object-cover opacity-70 breathe"
-      alt="AI Visual"
-    />
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent"></div>
-  </div>
+  <!-- BACKGROUND IMAGE FULL -->
+  <img
+    src="silhouette.jpg"
+    class="absolute inset-0 w-full h-full object-cover object-center breathe scale-110 opacity-70"
+    alt="AI Visual"
+  />
 
-  <!-- LEFT TEXT BLOCK -->
-  <div class="relative z-10 min-h-screen flex items-center">
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-950/40"></div>
 
-    <div class="w-full max-w-7xl mx-auto px-6">
+  <!-- TEXT -->
+  <div class="relative z-10 w-full">
+
+    <div class="max-w-7xl mx-auto px-6">
 
       <div class="max-w-xl text-left">
 
-        <p class="uppercase tracking-[0.35em] text-purple-200 text-base mb-6">
+        <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-6">
           Emotional AI for Women in Transition
         </p>
 
@@ -70,7 +70,7 @@
           <span class="text-purple-300">You need space to reconnect.</span>
         </h1>
 
-        <p class="text-2xl text-slate-300 leading-relaxed mb-10">
+        <p class="text-2xl text-slate-200 leading-relaxed mb-10">
           MyRebootAI is an emotionally adaptive AI companion designed to support women through burnout, identity shifts, emotional overwhelm, and quiet life transitions.
         </p>
 
