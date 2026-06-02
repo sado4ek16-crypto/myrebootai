@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* BASE */
     body {
       font-family: 'Inter', sans-serif;
       background-color: #020617;
@@ -35,32 +34,26 @@
       border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .soft-glow {
-      box-shadow: 0 0 40px rgba(168,85,247,0.15);
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
-    /* 🌬 BREATH EFFECT (ADDED, NOTHING REMOVED) */
+    /* 🌬 BACKGROUND BREATH (correct version) */
     @keyframes breathe {
       0% {
-        transform: scale(1);
+        transform: scale(1.05);
       }
-
       50% {
-        transform: scale(1.04);
+        transform: scale(1.12);
       }
-
       100% {
-        transform: scale(1);
+        transform: scale(1.05);
       }
     }
 
-    .breathe {
-      animation: breathe 8s ease-in-out infinite;
-      transform-origin: center right;
+    .breathe-bg {
+      animation: breathe 10s ease-in-out infinite;
+      transform-origin: center;
     }
   </style>
 </head>
@@ -70,11 +63,11 @@
   <!-- HERO SECTION -->
   <section class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden hero-gradient">
 
-    <!-- BACKGROUND IMAGE -->
-    <div class="absolute inset-0 flex justify-end items-center">
+    <!-- BACKGROUND IMAGE (NOW TRUE WALLPAPER) -->
+    <div class="absolute inset-0 overflow-hidden">
       <img
         src="silhouette.jpg"
-        class="h-full w-auto object-cover object-right opacity-90 breathe"
+        class="w-full h-full object-cover object-center breathe-bg opacity-90"
         alt="AI Visual"
       />
     </div>
@@ -82,7 +75,8 @@
     <!-- DARK OVERLAY -->
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
 
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <!-- CONTENT -->
+    <div class="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
       <div>
 
@@ -103,11 +97,11 @@
 
         <div class="flex flex-wrap gap-4">
 
-          <button class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl transition duration-300">
+          <button class="bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-8 py-4 rounded-2xl">
             Join Early Access
           </button>
 
-          <button class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl transition duration-300">
+          <button class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-2xl">
             Share Your Experience
           </button>
 
@@ -120,19 +114,14 @@
 
   <!-- EMOTIONAL PROBLEM -->
   <section class="py-24 px-6 bg-slate-950">
-
     <div class="max-w-5xl mx-auto text-center">
-
       <h2 class="text-4xl lg:text-5xl font-bold mb-8">
         Emotional overload is often invisible.
       </h2>
-
       <p class="text-slate-300 text-xl leading-relaxed">
         Many women over 40 continue functioning professionally and socially while silently navigating burnout, loneliness, emotional exhaustion, and identity shifts.
       </p>
-
     </div>
-
   </section>
 
   <!-- HOW IT WORKS -->
@@ -178,7 +167,6 @@
 
   <!-- PERSONAS -->
   <section class="py-24 px-6 bg-slate-950">
-
     <div class="max-w-7xl mx-auto text-center mb-20">
 
       <h2 class="text-4xl lg:text-5xl font-bold mb-6">
@@ -226,7 +214,6 @@
       </div>
 
     </div>
-
   </section>
 
   <!-- FORM -->
