@@ -22,13 +22,13 @@
     }
 
     @keyframes breathe {
-      0% { transform: scale(1.02); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1.02); }
+      0% { transform: scale(1.01); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1.01); }
     }
 
     .breathe {
-      animation: breathe 14s ease-in-out infinite;
+      animation: breathe 16s ease-in-out infinite;
       transform-origin: center;
     }
 
@@ -45,22 +45,21 @@
 <!-- HERO -->
 <section class="relative h-screen overflow-hidden">
 
-  <!-- BACKGROUND (FIXED PROPERLY) -->
+  <!-- BACKGROUND IMAGE (FIXED COMPOSITION) -->
   <img
     src="silhouette.jpg"
-    class="absolute inset-0 w-full h-full object-cover object-[center_30%] opacity-70 breathe"
+    class="absolute inset-0 w-full h-full object-cover object-[center_45%] scale-95 opacity-70 breathe"
     alt="AI Visual"
   />
 
-  <!-- OVERLAY -->
-  <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-950/40"></div>
+  <!-- OVERLAY + PURPLE GLOW -->
+  <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-900/50"></div>
 
   <!-- TEXT -->
   <div class="relative z-10 h-full">
 
     <div class="max-w-7xl mx-auto px-6 h-full flex items-start pt-[18vh]">
 
-      <!-- LEFT TEXT FIXED -->
       <div class="max-w-xl text-left">
 
         <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-5">
@@ -203,8 +202,8 @@
 
       <input class="w-full p-4 bg-white/10 rounded-2xl" placeholder="Your Name" />
       <input class="w-full p-4 bg-white/10 rounded-2xl" placeholder="Your Email" />
-      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="5" placeholder="Emotional challenge"></textarea>
-      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="4" placeholder="What you want from AI"></textarea>
+      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="5"></textarea>
+      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="4"></textarea>
 
       <button class="w-full bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold py-4 rounded-2xl">
         Submit
