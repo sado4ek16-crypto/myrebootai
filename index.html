@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ✅ FIX FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -22,11 +22,9 @@
       scroll-behavior: smooth;
     }
 
-    /* ✅ IMPROVED BREATHING */
-    @keyframes breathe {
+        @keyframes breathe {
       0% { transform: scale(1.02); opacity: 0.9; }
-      30% { transform: scale(1.05); opacity: 1; }
-      60% { transform: scale(1.06); opacity: 0.95; }
+      50% { transform: scale(1.06); opacity: 1; }
       100% { transform: scale(1.02); opacity: 0.9; }
     }
 
@@ -35,12 +33,7 @@
       transform-origin: center;
     }
 
-    .breathe:hover {
-      animation-duration: 6s;
-    }
-
-    /* ✅ GLOW */
-    .glow {
+       .glow {
       position: absolute;
       right: 5%;
       bottom: 10%;
@@ -70,57 +63,41 @@
 <!-- HERO -->
 <section class="relative h-screen overflow-hidden">
 
-  <!-- BACKGROUND -->
-  <img
-    src="silhouette.jpg"
-    class="absolute inset-0 w-full h-full object-cover object-center opacity-30 blur-md scale-110"
-  />
+  <img src="silhouette.jpg"
+    class="absolute inset-0 w-full h-full object-cover object-center opacity-30 blur-md scale-110"/>
 
-  <!-- FOREGROUND -->
-  <img
-    src="silhouette.jpg"
-    class="absolute right-0 bottom-0 h-full max-h-[95vh] w-auto object-contain object-bottom breathe"
-  />
+  <img src="silhouette.jpg"
+    class="absolute right-0 bottom-0 h-full max-h-[95vh] w-auto object-contain object-bottom breathe"/>
 
-  <!-- ✅ NEW GLOW -->
   <div class="glow"></div>
 
-  <!-- OVERLAY -->
   <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-900/40"></div>
 
-  <!-- TEXT -->
   <div class="relative z-10 h-full">
     <div class="max-w-7xl mx-auto px-6 h-full flex items-start pt-[18vh]">
 
       <div class="max-w-xl text-left">
 
-        <!-- ✅ ADD STRONG HEADLINE -->
-        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-          AI-powered life transformation for women 40+
-        </h1>
-
-        <!-- ORIGINAL -->
         <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-5">
           Emotional AI for Women in Transition
         </p>
 
-        <h2 class="text-2xl text-purple-300 mb-4">
-          You don’t need to be fixed. You need space to reconnect.
-        </h2>
+        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          You don’t need to be fixed.<br>
+          <span class="text-purple-300">You need space to reconnect.</span>
+        </h1>
 
         <p class="text-slate-200 text-lg leading-relaxed mb-6">
           MyRebootAI is an emotionally adaptive AI companion designed to support women through burnout, identity shifts, emotional overwhelm, and quiet life transitions.
         </p>
 
-        <!-- ✅ EXPLAIN BREATHING -->
-        <p class="text-slate-400 text-sm mb-8">
+               <p class="text-slate-400 text-sm mb-8">
           Subtle visual breathing reflects emotional rhythm and inner state
         </p>
 
-        <!-- ✅ FIX BUTTONS -->
         <div class="flex flex-wrap gap-4">
 
-          <a href="#signup" class="inline-block bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-7 py-3 rounded-2xl transition duration-300">
+                  <a href="#signup" class="inline-block bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-7 py-3 rounded-2xl transition duration-300">
             Join Early Access
           </a>
 
@@ -131,97 +108,22 @@
         </div>
 
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- PROBLEM -->
+<!-- EMOTIONAL PROBLEM -->
 <section class="py-24 px-6 bg-slate-950 text-center">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-4xl lg:text-5xl font-bold mb-8">
       Emotional overload is often invisible.
     </h2>
     <p class="text-slate-300 text-xl">
-      Many women over 40 continue functioning while silently navigating burnout, loneliness, and identity shifts.
+      Many women over 40 continue functioning professionally and socially while silently navigating burnout, loneliness, emotional exhaustion, and identity shifts.
     </p>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="py-24 px-6 bg-slate-900">
-
-  <div class="max-w-7xl mx-auto text-center mb-20">
-    <h2 class="text-4xl lg:text-5xl font-bold mb-6">Four Emotional AI Modes</h2>
-    <p class="text-slate-400">MyRebootAI adapts to emotional states</p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-
-    <div class="glass-card p-8 rounded-3xl">
-      <h3 class="text-2xl text-purple-300 mb-3">InnerMirror</h3>
-      <p>Reflection and emotional clarity</p>
-    </div>
-
-    <div class="glass-card p-8 rounded-3xl">
-      <h3 class="text-2xl text-purple-300 mb-3">Re:Root</h3>
-      <p>Identity rebuilding support</p>
-    </div>
-
-    <div class="glass-card p-8 rounded-3xl">
-      <h3 class="text-2xl text-purple-300 mb-3">Pause</h3>
-      <p>Emotional decompression</p>
-    </div>
-
-    <div class="glass-card p-8 rounded-3xl">
-      <h3 class="text-2xl text-purple-300 mb-3">StillHere</h3>
-      <p>Silent companionship</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PERSONAS -->
-<section class="py-24 px-6 bg-slate-950 text-center">
-
-  <div class="max-w-7xl mx-auto mb-20">
-    <h2 class="text-4xl lg:text-5xl font-bold mb-6">Inspired by Real Emotional Journeys</h2>
-    <p class="text-slate-400">Emotional experiences transformed into AI design</p>
-  </div>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-
-    <div class="glass-card overflow-hidden rounded-3xl">
-      <img src="leyla.jpg" class="h-[430px] w-full object-cover" />
-      <div class="p-6">
-        <h3 class="text-2xl mb-2">Leyla</h3>
-        <p class="italic text-slate-300">“I’m always functioning… but emotionally exhausted.”</p>
-      </div>
-    </div>
-
-    <div class="glass-card overflow-hidden rounded-3xl">
-      <img src="miriam.jpg" class="h-[430px] w-full object-cover" />
-      <div class="p-6">
-        <h3 class="text-2xl mb-2">Miriam</h3>
-        <p class="italic text-slate-300">“I don’t know who I am anymore.”</p>
-      </div>
-    </div>
-
-    <div class="glass-card overflow-hidden rounded-3xl">
-      <img src="sabina.jpg" class="h-[430px] w-full object-cover" />
-      <div class="p-6">
-        <h3 class="text-2xl mb-2">Sabina</h3>
-        <p class="italic text-slate-300">“I forgot how to slow down.”</p>
-      </div>
-    </div>
-
-    <div class="glass-card overflow-hidden rounded-3xl">
-      <img src="aysel.jpg" class="h-[430px] w-full object-cover" />
-      <div class="p-6">
-        <h3 class="text-2xl mb-2">Aysel</h3>
-        <p class="italic text-slate-300">“Sometimes I just want someone to be there quietly.”</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -233,15 +135,25 @@
     <h2 class="text-4xl font-bold mb-6 text-center">Join Early Access</h2>
 
     <p class="text-center text-slate-300 mb-10">
-      Share your experience and help shape MyRebootAI
+      Share your experience and help shape MyRebootAI.
     </p>
 
     <form class="space-y-6">
 
       <input class="w-full p-4 bg-white/10 rounded-2xl" placeholder="Your Name" />
       <input class="w-full p-4 bg-white/10 rounded-2xl" placeholder="Your Email" />
-      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="5"></textarea>
-      <textarea class="w-full p-4 bg-white/10 rounded-2xl" rows="4"></textarea>
+
+      <textarea 
+        class="w-full p-4 bg-white/10 rounded-2xl" 
+        rows="5"
+        placeholder="What emotional challenge do you struggle with most?"
+      ></textarea>
+
+      <textarea 
+        class="w-full p-4 bg-white/10 rounded-2xl" 
+        rows="4"
+        placeholder="What would you want from an emotionally supportive AI?"
+      ></textarea>
 
       <button class="w-full bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold py-4 rounded-2xl">
         Submit
@@ -257,7 +169,6 @@
 
 </section>
 
-<!-- CTA -->
 <section class="py-32 px-6 bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 text-center">
 
   <h2 class="text-4xl lg:text-6xl font-bold mb-10">
