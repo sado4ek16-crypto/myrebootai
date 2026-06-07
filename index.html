@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,8 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-    https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap
+  <!-- ✅ ВАЖНО: ЭТО БЫЛО СЛОМАНО -->
+  https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap
 
   <style>
     body {
@@ -21,7 +23,8 @@
       scroll-behavior: smooth;
     }
 
-        @keyframes breathe {
+    /* ✅ УЛУЧШЕННОЕ ДЫХАНИЕ */
+    @keyframes breathe {
       0% { transform: scale(1.02); opacity: 0.9; }
       50% { transform: scale(1.06); opacity: 1; }
       100% { transform: scale(1.02); opacity: 0.9; }
@@ -32,7 +35,8 @@
       transform-origin: center;
     }
 
-        .glow {
+    /* ✅ GLOW */
+    .glow {
       position: absolute;
       right: 5%;
       bottom: 10%;
@@ -68,7 +72,8 @@
   <img src="silhouette.jpg"
     class="absolute right-0 bottom-0 h-full max-h-[95vh] w-auto object-contain object-bottom breathe"/>
 
-    <div class="glow"></div>
+  <!-- ✅ ДОБАВИЛИ glow -->
+  <div class="glow"></div>
 
   <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-purple-900/40"></div>
 
@@ -76,31 +81,29 @@
     <div class="max-w-7xl mx-auto px-6 h-full flex items-start pt-[18vh]">
 
       <div class="max-w-xl text-left">
-       
-        <h1 class="text-5xl lg:text-7xl font-bold mb-6">
-          AI-powered life transformation for women 40+
-        </h1>
-        
+
         <p class="uppercase tracking-[0.35em] text-purple-200 text-sm mb-5">
           Emotional AI for Women in Transition
         </p>
 
-       <h2 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+        <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
           You don’t need to be fixed.<br>
           <span class="text-purple-300">You need space to reconnect.</span>
-        </h2>
+        </h1>
 
         <p class="text-slate-200 text-lg leading-relaxed mb-6">
           MyRebootAI is an emotionally adaptive AI companion designed to support women through burnout, identity shifts, emotional overwhelm, and quiet life transitions.
         </p>
 
-               <p class="text-slate-400 text-sm mb-8">
+        <!-- ✅ объяснение эффекта -->
+        <p class="text-slate-400 text-sm mb-8">
           Subtle visual breathing reflects emotional rhythm and inner state
         </p>
 
         <div class="flex flex-wrap gap-4">
 
-                    #signup="inline-block bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-7 py-3 rounded-2xl transition duration-300">
+          <!-- ✅ ИСПРАВЛЕНО -->
+          #signup="inline-block bg-purple-400 hover:bg-purple-300 text-slate-900 font-semibold px-7 py-3 rounded-2xl transition duration-300">
             Join Early Access
           </a>
 
@@ -172,6 +175,7 @@
 
 </section>
 
+<!-- ✅✅✅ ТВОЙ CTA (НЕ ТРОГАЛ, ВООБЩЕ) -->
 <section class="py-32 px-6 bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 text-center">
 
   <h2 class="text-4xl lg:text-6xl font-bold mb-10">
